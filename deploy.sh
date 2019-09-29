@@ -1,5 +1,5 @@
 set -e
 
 git add .
-git commit -m "fix username to wuchienhsin01"
+git commit -m "fix image name"
 git push
