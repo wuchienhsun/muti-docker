@@ -1,5 +1,5 @@
 set -e
 
 git add .
-git commit -m "fix image name"
+git commit -m "fix docker login"
 git push
