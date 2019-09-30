@@ -1,5 +1,5 @@
 set -e
 
 git add .
-git commit -m "rebuild -5 "
+git commit -m "rebuild -ˊ "
 git push
