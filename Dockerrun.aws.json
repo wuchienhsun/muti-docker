@@ -18,14 +18,13 @@
     {
       "name": "worker",
       "image": "wuchienhsin01/multi-worker",
-      "hostname": "client",
+      "hostname": "worker",
       "essential": false,
       "memory": 128
     },
     {
       "name": "nginx",
       "image": "wuchienhsin01/multi-nginx",
-      "hostname": "nginx",
       "essential": true,
       "portMappings": [
         {
