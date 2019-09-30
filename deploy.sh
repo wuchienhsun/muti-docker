@@ -1,5 +1,5 @@
 set -e
 
 git add .
-git commit -m "fix docker login"
+git commit -m "add aws deploy config"
 git push

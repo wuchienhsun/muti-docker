@@ -16,8 +16,22 @@ after_success:
   - docker build -t wuchienhsin01/multi-worker ./worker
   # Log in to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  # push in to docker hub
   - docker push wuchienhsin01/multi-client
   - docker push wuchienhsin01/multi-nginx
   - docker push wuchienhsin01/multi-server
   - docker push wuchienhsin01/multi-worker
-# push in to docker hub
+
+deploy:
+  provider: elasticbeanstalk
+  region: "ap-northeast-1"
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-ap-northeast-1-924486238100
+  bucket_path: docker-multi
+  on:
+    branch: master
+  access_key_id:
+    secure: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
