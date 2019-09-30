@@ -1,5 +1,5 @@
 set -e
 
 git add .
-git commit -m "add aws deploy config"
+git commit -m "add memory in aws.json file"
 git push

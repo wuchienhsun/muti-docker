@@ -5,19 +5,22 @@
       "name": "client",
       "image": "wuchienhsin01/multi-client",
       "hostname": "client",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "server",
       "image": "wuchienhsin01/multi-server",
       "hostname": "server",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "worker",
       "image": "wuchienhsin01/multi-worker",
       "hostname": "client",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "nginx",
@@ -33,7 +36,8 @@
       "links": [
         "client",
         "server"
-      ]
+      ],
+      "memory": 128
     }
   ]
 }
