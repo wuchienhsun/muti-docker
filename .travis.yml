@@ -26,7 +26,7 @@ deploy:
   provider: elasticbeanstalk
   region: ap-northeast-1
   app: multi-docker
-  env: MultiDocker-env-1
+  env: MultiDocker-env
   bucket_name: elasticbeanstalk-ap-northeast-1-924486238100
   bucket_path: docker-multi
   on:
@@ -36,4 +36,3 @@ deploy:
   secret_access_key:
     secure: $AWS_SECRET_KEY
 
-    
