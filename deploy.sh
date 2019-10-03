@@ -1,5 +1,5 @@
 set -e
 
 git add .
-git commit -m "rebuild -ˊ "
+git commit -m "retry deploy"
 git push
